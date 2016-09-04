@@ -2,7 +2,7 @@ const express = require('express');
 const get = require('simple-get');
 const app = express();
 
-app.set('port'), (process.env.PORT || 5000);
+app.set('port', (process.env.PORT || 5000));
 
 // Root path for users who are looking into project
 app.get('/', (req, res) => {
