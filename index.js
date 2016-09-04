@@ -2,6 +2,8 @@ const express = require('express');
 const get = require('simple-get');
 const app = express();
 
+app.set('port'), (process.env.PORT || 5000);
+
 // Root path for users who are looking into project
 app.get('/', (req, res) => {
   res.send(
@@ -48,6 +50,6 @@ app.get('/downloadLatest', (req, res) => {
 // HTTP port
 const port = 80;
 
-app.listen(port, () => {
+app.listen(app.get('port'), () => {
   console.log('Listening on port = ' + port);
 });
